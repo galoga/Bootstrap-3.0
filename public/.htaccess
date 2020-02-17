@@ -1,0 +1,33 @@
+########################################
+# © Copyright : All rights reserved 2020
+# Created by : Galoga Industries
+# Contact : hello@galoga.tech
+# Created date :	2019-12-15
+# Update date :		2020-01-11
+########################################
+
+# Make PHP code look like unknown types
+AddType application/x-httpd-php .inc .ini .bop .foo .133t
+
+# PHP Errors
+# php_flag display_startup_errors on
+# php_flag display_errors on
+
+# URL Rewrites - Remove the question mark from the request but maintain the query string
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule ^(.*)$ index.php?$1 [L,QSA]
+
+#Stop cashing files
+<filesMatch "\.(html|htm|js|css)$">
+  FileETag None
+  <ifModule mod_headers.c>
+     Header unset ETag
+     Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+     Header set Pragma "no-cache"
+     Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+  </ifModule>
+</filesMatch>
