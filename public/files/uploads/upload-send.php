@@ -6,7 +6,7 @@ $dir_base = "";
 $fileExt = explode('.', $_FILES['userImage']['name']);
 $fileActualExt = strtolower(end($fileExt));
 $allowed = array('txt', 'pdf', 'doc', 'xls', 'png');
-if (in_array($fileActualExt, $allowed)) {
+if(in_array($fileActualExt, $allowed)) {
 if(is_uploaded_file($_FILES['userImage']['tmp_name'])) {
 if(move_uploaded_file($_FILES['userImage']['tmp_name'],$dir_base.$_FILES['userImage']['name'])) {
            // return path

@@ -36,14 +36,14 @@ FUNC_ALERT();
 ?>
 <section class="section">
 	<div class="container<?= CON_DIV_STYLE; ?>">
-		<?php echo CON_SPACE[4]; ?> 
+		<?= CON_SPACE[4]; ?> 
 		<div class="row row-padding">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
 		        <?php 
 		        $puid = $_POST['puid']; # PERSONAL USER ID
                 $puco = $_POST['puco']; # PERSONAL USER CODE 
-                FUNC_LOGON($puid, $puco);	        
+                FUNC_LOGON($puid , $puco);	        
 		        ?> 
 			</div>
 			<div class="col-md-4"></div>

@@ -1,0 +1,14 @@
+########################################
+# © Copyright : All rights reserved 2019
+# Created by : Galoga Industries
+# Contact : hello@galoga.tech
+# Created date :	2019-06-22 	
+# Update date :		2019-06-24 	
+# Version : 		1.0
+########################################
+
+# Make PHP code look like unknown types
+AddType application/x-httpd-php .inc .ini .md .bop .foo .133t
+
+# Hide the contents of directories
+IndexIgnore *

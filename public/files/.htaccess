@@ -12,4 +12,3 @@ AddType application/x-httpd-php .inc .ini .bop .foo .133t
 
 # Hide the contents of directories
 IndexIgnore *
-

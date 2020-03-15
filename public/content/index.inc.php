@@ -19,25 +19,25 @@
 FUNC_ALERT();
 ?>
 <section class="section">
-	<div class="container<?= CON_DIV_STYLE; ?>">	
-	<h2><i class="fas fa-globe-americas"></i>&nbsp;Hello World!</h2>
-	<h5>Welcome to the Galoga Technologies™ Bootstrap Boilerplate</h5>
-	<?php  FUNC_HELLO_WORLD(); # -- READ INFO BELOW ?>
-	    
-	 <?php 
-        ########################################
-        # THE FUNCTION ABOVE SHOWS THE WELCOME
-        # MESSAGES - DELETE IT TO GET STARTED
-        # 
-        # PAGE TEMPLATES ARE FOUND IN:
-        # '/public/content_templates'
-        # 
-        # ALL CONTENT PAGES TO BE SAVED IN:
-        # '/public/content/' to work properly
-        # 
-        ######################################## 
-        ?>
-   </div>  	
+<div class="container<?= CON_DIV_STYLE; ?>">	
+    <div class="row">
+        <div class="col-md-12">      
+            <?php FUNC_HELLO_WORLD(); # -- READ INFO BELOW
+            ########################################
+            # THE FUNCTION ABOVE SHOWS THE WELCOME
+            # MESSAGES - DELETE IT TO GET STARTED
+            # 
+            # PAGE TEMPLATES ARE FOUND IN:
+            # '/public/content/templates'
+            # 
+            # ALL CONTENT PAGES TO BE SAVED IN:
+            # '/public/content/' to work properly
+            # 
+            ######################################## 
+            ?>
+        </div>
+    </div>          
+</div>  	
 </section>
 
 

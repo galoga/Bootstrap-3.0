@@ -4,7 +4,11 @@
 # Created by : 		Galoga Tech
 # Contact : 		hello@galoga.tech
 # Created date : 	2019-12-14
-# Update date :  	2020-02-16
+# Update date :  	2020-02-26
+########################################
+
+########################################
+# LOADED IN "autoloader.inc.php"
 ########################################
 
 # SESSION START 
@@ -20,12 +24,10 @@ function FUNC_LOGON($puid, $puco){
 $locked = CON_UUID;
 if ($puid === 'upload' && $puco === 'upload'):
 	$url = 'pid=upload&u='.$locked;
-elseif($puid === 'test' && $puco === 'test'):
-	$url = 'pid=upload&u='.$locked;
 elseif($puid === 'files' && $puco === 'files'):
 	$url = 'pid=files&u='.$locked;
-elseif($puid === 'table' && $puco === 'table'):
-	$url = 'pid=table&u='.$locked;
+# elseif($puid === '<XXX>' && $puco === '<XXX>'):
+# 	$url = 'pid=<XXX>&u='.$locked;
 else:
 	$url  = 'pid=logon&err=wuc';
 endif;
@@ -74,8 +76,8 @@ endif;
 }
 
 # -- FILE DOWNLOAD URL -- 
-function FUNC_FILE_DOWNLOAD_NAME($f) {
-    echo 'http://'.CON_SITE_URL.'/content/download.php?f='.$f;
+function FUNC_FILE_DOWNLOAD_NAME($filename) {
+    echo 'http://'.CON_SITE_URL.'/content/download.php?f='.$filename;
 }
 
 ########################################
@@ -96,32 +98,14 @@ endif;
 }
 
 ########################################
-# NAVIGATION LINKS MENU CHOOSER
-# Turn on and off in 'contants.inc.php'
-########################################
-
-function FUNC_NAV_LINKS() {
-if(isset($_GET['u'])): 
- 	require_once '../includes/view/view_nav_links_logon.inc.php';
-else:
- 	require_once '../includes/view/view_nav_links_default.inc.php';
-endif;
-}
-
-########################################
 # CONSTANTS are all in CAPITALS and 
 # start with "CON_" to make it easy 
 ########################################
 
-const CON_VERSION_DATE  = '2020-02-16';
-const CON_VERSION_DEV   = '269';                    # Added PDO connection in model handler
-const CON_VERSION       = '3.20.2';
-const CON_HOMAGE_INFO   = 'Powered by Galoga Technologies';
-
 # -- PASSWORD FOR PHP MAILER --
-const CON_PHPMAILER_HOST = '';                      # Add mail host for PHPMailer
-const CON_PHPMAILER_USER = '';                      # Add mail user for PHPMailer
-const CON_PHPMAILER_PASS = '';                      # Add mail password for PHPMailer
+const CON_PHPMAILER_HOST = ''; # Add mail host for PHPMailer
+const CON_PHPMAILER_USER = ''; # Add mail user for PHPMailer
+const CON_PHPMAILER_PASS = ''; # Add mail password for PHPMailer
  
 $CON_FILE       = $_SERVER['SCRIPT_FILENAME'];
 $CON_USER       = $_SERVER['HTTP_USER_AGENT'];
@@ -133,7 +117,7 @@ define('CON_D', date("d"));
 define('CON_YMD', date("Ydm"));
 define('CON_Y-M-D', date("Y-d-m"));
 
-define('CON_UUID', md5(date('mYdAM')));            # Change order in date
+define('CON_UUID', md5(date('MmYdA')));            # Change order in date
 
 ########################################
 # DEFAULT WELOCOME TEXT in 
@@ -141,18 +125,13 @@ define('CON_UUID', md5(date('mYdAM')));            # Change order in date
 ########################################
 
 function FUNC_HELLO_WORLD(){
-echo <<<EOT
-		<p><i class="fab fa-bootstrap" style="font-size:84px; color: #513f78"></i></p>
-		<p>You need a basic knowledge of HTML, CSS & PHP to get this baby up and running!<br> This Boilerplate is built around a <a href="https://en.wikipedia.org/wiki/Model–view–controller">MODEL-VIEW-CONTROLLER</a> design pattern.</p>
-		<a href="http://galoga.github.io" class="btn btn-primary btn-lg"><i class="fas fa-tools">&nbsp;</i>Configure the site - <i class="fab fa-github">&nbsp;</i>GitHub</a>
-		</p>
-EOT;
 
-echo '<p>';
-echo '<span><strong>Boilerplate information</strong></span>';
-echo '<br>';
-echo 'Version: <span class="text-grey">'.CON_VERSION.' Build: '.CON_VERSION_DEV;
-echo '<br>'; 
-echo '</p>';
+$contents =  file_get_contents('helloworld.md');
+$Parsedown = new Parsedown();
+echo $Parsedown->text($contents);
+
+echo '<strong>Boilerplate information:</strong><br>';
+echo 'Version: <span class="text-grey">'.CON_VERSION.' Build: '.CON_VERSION_DEV.'</span>';
+echo '<br><strong>Release Notes:&nbsp;</strong><a href="pid=md&mid=release">Click here</a>';
 }
 ?>

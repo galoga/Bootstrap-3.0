@@ -1,20 +1,18 @@
 <?php 
 ########################################
-# © Copyright : All rights reserved 2019
+# © Copyright : All rights reserved 2020
 # Created by : 		Galoga Tech
 # Contact : 		hello@galoga.tech
 # Created date : 	2019-12-14
-# Update date :  	2019-12-21
-# Version : 		3.19.12
+# Update date :  	2020-03-09
 ########################################
 
 ########################################
-# LOADED IN "/public/index.php"
+# LOADED IN "autoloader.inc.php"
 ########################################
 
 ########################################
-# THIS IS THE HTML PAGE TEMPLATE 
-# CONTROLLER 
+# THIS IS THE PAGE TEMPLATE 
 ########################################
 ?>
 <!DOCTYPE html>
@@ -64,16 +62,35 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 	    		<span class="navbar-toggler-icon"></span>
 			</button>
-<?=	FUNC_NAV_LINKS();  # -- NAV LINKS FUNCTION --  ?> 
+    <?= require_once '../includes/view/view_navigation.inc.php'; # -- NAV LINKS FUNCTION --  ?>
 	</nav>									
 <main>
-<?php # -- INSERT OF CONTENT FILE VIA "pid" AND/OR 'sid" BLW -- 
-if(isset($_GET['pid'])):
-	include 'content/'.$_GET['pid'].'.inc.php';
+<?php # -- INSERT OF CONTENT HANDLER BLW -- 
+if(isset($_GET['pid'])):   
+    if(isset($_GET['mid'])): 
+	    echo '<section class="section">';
+        echo '<div class="container'.CON_DIV_STYLE.'">';
+        echo '<div class="row">';
+        echo '<div class="col-md-12">';
+        $contents = file_get_contents("content/markdown/".$_GET['mid'].".md");
+        $Parsedown = new Parsedown();
+        echo $Parsedown->text($contents);
+        echo '</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</section>';
+    # elseif(isset($_GET['sid'])):
+    #     include 'content/start-'.$_GET['sid'].'.inc.php';
+    elseif(empty($_GET['pid'])): 
+	    include 'content/index.inc.php';
+    else:
+	   include 'content/'.$_GET['pid'].'.inc.php'; 
+    endif;    
 else:
-	include 'content/index.inc.php';
-endif;
-# -- INSERT OF CONTENT FILE VIA "pid" AND/OR 'sid" ABV  -- ?>
+    include 'content/index.inc.php';
+endif
+# -- INSERT OF CONTENT HANDLER ABV  -- ?>
 </main>
 <footer>
 <?php # -- FOOTER BLW -- 
@@ -86,7 +103,7 @@ elseif(CON_FOOTER_TYPE == 'three-col'):
 elseif(CON_FOOTER_TYPE == 'four-col'):
 	require_once 'content/footer/footer_col_04.inc.php';
 elseif(CON_FOOTER_TYPE == 'basic'):
-    echo '<div class="container border-top small" style="color: grey"><p>'.CON_SITE_COPYRIGHT.' '.CON_Y.' '.CON_SITE_FOOTER.' Ver : '.CON_VERSION.'</p></div>';
+    echo '<br><div class="container border-top small" style="color: grey"><p>'.CON_SITE_COPYRIGHT.' '.CON_Y.' '.CON_SITE_FOOTER.' Ver : '.CON_VERSION.'</p></div>';
 endif;
 # -- FOOTER ABV -- ?>
 </footer>

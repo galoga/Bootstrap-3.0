@@ -15,7 +15,7 @@
 # FOOTER TEXT HOLDER three-col
 ########################################
 ?>
-<div class="container-fluid text-secondary footer-padding bg-<?= CON_FOOTER_COLOUR; ?>">
+<div class="container-fluid text-secondary footer-padding bg-<?= CON_FOOTER_COLOUR; ?>" style="height: 250px">
 	<div class="container footer-padding bg-<?= CON_FOOTER_COLOUR; ?>">
 		<div class="row">
 			<div class="col-md-4">

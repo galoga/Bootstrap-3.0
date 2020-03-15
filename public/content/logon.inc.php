@@ -58,7 +58,7 @@ FUNC_ALERT();
 							<input id="puco" name="puco" type="password" required class="form-control" maxlength="10" pattern="[A-Za-z0-9]{3,10}" wrap="physical" autocomplete="off" onblur="this.value=removeSpaces(this.value);" autofocus>
 						</div>
 				</div>
-				<button name="submit" type="submit" name="submit" class="btn btn-block btn-outline-success"><i class="fa fa-check"></i>&nbsp;LOGON</button>
+				<button name="submit" type="submit" name="submit" class="btn btn-block btn-outline-success"><i class="fa fa-check"></i>&nbsp;LOG ON</button>
 				</form>
 				<?php # -- LOGON FORM ABV--; ?>
 			</div>
