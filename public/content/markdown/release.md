@@ -1,24 +1,30 @@
 ##Release Notes
 #####What's on the agenda
 <!-- # THIS PAGES COMES AS PART OF THE DEFAULT INSTALLATION  -->
+<p>
+16MAR20<br>
+<small style="color: grey">Version: 3.20.3 Build: 282</small><br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Changed include structure
+</p>
 
 <p>
 15MAR20<br>
-<small style="color: grey">Version: 3.20.2 Build: 281</small><br>
+<small style="color: grey">Version: 3.20.3 Build: 281</small><br>
 <span class="badge badge-success"><i class="fa fa-check"></i>&nbsp;New</span><br>
 - Hid the content of sub-directories<br>
 </p>
 
 <p>
 09MAR20<br>
-<small style="color: grey">Version: 3.20.2 Build: 280</small><br>
+<small style="color: grey">Version: 3.20.3 Build: 280</small><br>
 <span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
 - Changed navigation function 
 </p>
 
 <p>
 08MAR20<br>
-<small style="color: grey">Version: 3.20.2 Build: 279</small><br>
+<small style="color: grey">Version: 3.20.3 Build: 279</small><br>
 <span class="badge badge-success"><i class="fa fa-check"></i>&nbsp;New</span><br>
 - New READ ME structure <br>
 <span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
@@ -27,7 +33,7 @@
 
 <p>
 01MAR20<br>
-<small style="color: grey">Version: 3.20.2 Build: 278</small><br>
+<small style="color: grey">Version: 3.20.3 Build: 278</small><br>
 <span class="badge badge-success"><i class="fa fa-check"></i>&nbsp;New</span><br>
 - New READ ME section <br>
 <span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>

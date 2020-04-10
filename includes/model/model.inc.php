@@ -26,5 +26,3 @@ return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';
     }
 }
 */
-
-?>

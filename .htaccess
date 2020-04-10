@@ -8,7 +8,7 @@
 ########################################
 
 # Make PHP code look like unknown types
-AddType application/x-httpd-php .inc .ini .bop .foo .133t
+AddType application/x-httpd-php .inc .ini .md .bop .foo .133t
 
 # Hide the contents of directories
 IndexIgnore *

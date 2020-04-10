@@ -131,7 +131,6 @@ $Parsedown = new Parsedown();
 echo $Parsedown->text($contents);
 
 echo '<strong>Boilerplate information:</strong><br>';
-echo 'Version: <span class="text-grey">'.CON_VERSION.' Build: '.CON_VERSION_DEV.'</span>';
+echo 'Version: <span class="text-grey">'.CON_VERSION.' Build: '.CON_VERSION_BUILD.'</span>';
 echo '<br><strong>Release Notes:&nbsp;</strong><a href="pid=md&mid=release">Click here</a>';
 }
-?>

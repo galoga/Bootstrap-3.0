@@ -4,7 +4,7 @@
 # Created by : 		Air Message
 # Contact : 		hello@galoga.tech
 # Created date : 	2020-02-25
-# Update date :  	2020-02-26
+# Update date :  	2020-03-16
 ########################################
 
 ########################################
@@ -21,13 +21,13 @@ include 'version.inc.php';
 
 # -- EXTERNAL VENDOR HANDLERS  --
 # -- PHPMAiler --
-require_once 'vendor/PHPMailer/src/Exception.php';
-require_once 'vendor/PHPMailer/src/PHPMailer.php';
-require_once 'vendor/PHPMailer/src/SMTP.php';
+include 'vendor/PHPMailer/src/Exception.php';
+include 'vendor/PHPMailer/src/PHPMailer.php';
+include 'vendor/PHPMailer/src/SMTP.php';
 # -- TCPDF -- 
-require_once 'vendor/TCPDF/tcpdf.php';
+#include 'vendor/TCPDF/tcpdf.php';
 # -- Parsedown -- 
-require_once 'vendor/Parsedown/Parsedown.php';
+include 'vendor/Parsedown/Parsedown.php';
 
 # -- MAIN CONTROLLER FOR THE SITE --
 include 'controller/controller.inc.php';
@@ -40,5 +40,3 @@ include 'model/model.inc.php';
 
 # -- HTML PAGE TEMPLATE HANDLER --
 include 'view/view.inc.php';
-
-?>
