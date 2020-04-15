@@ -62,8 +62,8 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 	    		<span class="navbar-toggler-icon"></span>
 			</button>
-    <?= require_once '../includes/view/view_navigation.inc.php'; # -- NAV LINKS FUNCTION --  ?>
-	</nav>									
+    <?php include '../includes/view/view_navigation.inc.php'; # -- NAV LINKS FUNCTION --  ?>
+    </nav>									
 <main>
 <?php # -- INSERT OF CONTENT HANDLER BLW -- 
 if(isset($_GET['pid'])):   

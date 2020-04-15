@@ -22,19 +22,19 @@ FUNC_ALERT();
 <div class="container<?= CON_DIV_STYLE; ?>">	
     <div class="row">
         <div class="col-md-12">      
-            <?php FUNC_HELLO_WORLD(); # -- READ INFO BELOW
-            ########################################
-            # THE FUNCTION ABOVE SHOWS THE WELCOME
-            # MESSAGES - DELETE IT TO GET STARTED
-            # 
-            # PAGE TEMPLATES ARE FOUND IN:
-            # '/public/content/templates'
-            # 
-            # ALL CONTENT PAGES TO BE SAVED IN:
-            # '/public/content/' to work properly
-            # 
-            ######################################## 
-            ?>
+        <?php FUNC_HELLO_WORLD(); # -- READ INFO BELOW
+        ########################################
+        # THE FUNCTION ABOVE SHOWS THE WELCOME
+        # MESSAGES - DELETE IT TO GET STARTED
+        # 
+        # PAGE TEMPLATES ARE FOUND IN:
+        # '/public/content/templates'
+        # 
+        # ALL CONTENT PAGES TO BE SAVED IN:
+        # '/public/content/' to work properly
+        # 
+        ######################################## 
+        ?>
         </div>
     </div>          
 </div>  	

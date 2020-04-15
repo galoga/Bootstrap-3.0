@@ -33,7 +33,7 @@ const CON_SITE_COPYRIGHT = '&copy;&nbsp;Copyright';
 const CON_PAGE_TITLE = '&lt; YOUR PAGE NAME HERE &gt;';
 
 // -- BOOTSTRAP THEME COLOUR FOR NAVBAR use 'dark' or 'light' --
-const CON_NAV_COLOUR = 'dark'; 
+const CON_NAV_COLOUR = 'light'; 
 
 // -- BOOTSTRAP THEME BORDER FOR NAVBAR use 'border-bottom' = ON or 'NULL' = OFF --
 const CON_NAV_BORDER = 'border-bottom'; 
