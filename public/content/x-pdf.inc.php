@@ -1,5 +1,7 @@
 <?php 
 
+echo 'TEST';
+
 // Create new PDF
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
@@ -39,5 +41,5 @@ $pdf->writeHTML($html, true, false, true, false, '');
  
 $pdf->lastPage();
 
-ob_end_clean();
-$pdf->Output('example_006.pdf', 'D');
+ob_clean();
+$pdf->Output('example_001.pdf', 'D');

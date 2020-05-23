@@ -4,14 +4,14 @@
 # Created by : 		Galoga Tech
 # Contact : 		hello@galoga.tech
 # Created date : 	2019-12-14
-# Update date :  	2020-02-26
+# Update date :  	2020-05-10
 ########################################
 
 ########################################
 # LOADED IN "autoloader.inc.php"
 ########################################
 
-# SESSION START 
+# -- SESSION START -- 
 session_start();
 
 ########################################
@@ -26,10 +26,11 @@ if ($puid === 'upload' && $puco === 'upload'):
 	$url = 'pid=upload&u='.$locked;
 elseif($puid === 'files' && $puco === 'files'):
 	$url = 'pid=files&u='.$locked;
+# -- LPOGON TEMPLATE --
 # elseif($puid === '<XXX>' && $puco === '<XXX>'):
 # 	$url = 'pid=<XXX>&u='.$locked;
 else:
-	$url  = 'pid=logon&err=wuc';
+	$url  = 'pid=logon&err=wuc'; # SEE FUNC_ERROR
 endif;
 
 echo "<script type='text/javascript'>document.location.href='{$url}';</script>";
@@ -42,7 +43,7 @@ $locked = CON_UUID;
 if($_GET['u'] === $locked): 
 	echo '';	
 else:
- 	$url  = 'pid=logon&err=log'; # -- 
+ 	$url  = 'pid=logon&err=log'; # SEE FUNC_ERROR
 	echo "<script type='text/javascript'>document.location.href='{$url}';</script>";
 	echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $url . '">';
 endif;
@@ -80,12 +81,48 @@ function FUNC_FILE_DOWNLOAD_NAME($filename) {
     echo 'http://'.CON_SITE_URL.'/content/download.php?f='.$filename;
 }
 
+# -- MARKDOWN CALL FUNCTION -- 
+function FUNC_MARKDOWN($markdown_filename){ # Example syntax : 'folder/filename.md'
+$contents =  file_get_contents($markdown_filename);
+$Parsedown = new Parsedown();
+echo $Parsedown->text($contents);
+}
+
+# -- MAIN CONTENT SITCH FUNCTION - handles 'index.php/pid=' + 'index.php/pid=mid&mid=xyz' calls 
+function FUNC_MAIN_CONTENT_SWITCH(){
+if(isset($_GET['pid'])):   
+    if(isset($_GET['mid'])):
+	    echo '<section class="section">';
+        echo '<div class="container'.CON_DIV_STYLE.'">';
+        echo '<div class="row">';
+        echo '<div class="col-md-12">';
+        $contents = file_get_contents("content/markdown/".$_GET['mid'].".md");
+        $Parsedown = new Parsedown();
+        echo $Parsedown->text($contents);
+        echo '</p>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</section>';
+    # -- OPTIONAL 'start-' + sid SYNTAX  -- 
+    # elseif(isset($_GET['sid'])):
+    #     include 'content/start-'.$_GET['sid'].'.inc.php';
+    elseif(empty($_GET['pid'])): 
+	    include 'content/index.inc.php';
+    else:
+	   include 'content/'.$_GET['pid'].'.inc.php'; 
+    endif;    
+else:
+    include 'content/index.inc.php';
+endif;
+}
+
 ########################################
 # SITE ALERT MESSAGE FUNCTIONS 
 # Turn on and off in 'contants.inc.php'
 ########################################
 
-function FUNC_ALERT() {
+function FUNC_ALERT(){
 if(CON_ALERT_STATE == 'on'):
 	echo '<div class="container alert alert-'.CON_ALERT_MESSAGE_STYLE.'" role="alert">'.CON_ALERT_MESSAGE_TEXT.'</div>';
 endif;
@@ -117,7 +154,14 @@ define('CON_D', date("d"));
 define('CON_YMD', date("Ydm"));
 define('CON_Y-M-D', date("Y-d-m"));
 
-define('CON_UUID', md5(date('MmYdA')));            # Change order in date
+define('CON_H', date("Y-d-m"));
+
+$salt_1			= '';
+$salt_2         = '';
+$hash           = md5(date('g-G-h-H-W-Y')); # CHANGE ORDER
+$uuid      		= strtoupper($salt_1.$hash.$salt_2);
+
+define('CON_UUID', $uuid); 
 
 ########################################
 # DEFAULT WELOCOME TEXT in 
@@ -125,12 +169,12 @@ define('CON_UUID', md5(date('MmYdA')));            # Change order in date
 ########################################
 
 function FUNC_HELLO_WORLD(){
-
-$contents =  file_get_contents('helloworld.md');
-$Parsedown = new Parsedown();
-echo $Parsedown->text($contents);
+FUNC_MARKDOWN('content/markdown/helloworld.md'); 
 
 echo '<strong>Boilerplate information:</strong><br>';
 echo 'Version: <span class="text-grey">'.CON_VERSION.' Build: '.CON_VERSION_BUILD.'</span>';
-echo '<br><strong>Release Notes:&nbsp;</strong><a href="pid=md&mid=release">Click here</a>';
+echo '<br><strong>Release Notes:&nbsp;</strong><a href="pid=mid&mid=release">Click here</a>';
 }
+
+
+

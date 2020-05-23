@@ -40,6 +40,7 @@
     $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
     # -- CONTENT --
+    $mail->IsHTML(true);                                  // HTML mail
     $mail->Subject = "Here is the subject";
     $mail->Body    = "This is the HTML message body";
     # $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';

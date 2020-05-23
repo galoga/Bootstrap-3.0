@@ -1,6 +1,47 @@
 ##Release Notes
 #####What's on the agenda
 <!-- # THIS PAGES COMES AS PART OF THE DEFAULT INSTALLATION  -->
+<p>
+09MAY20 <small style="color: grey">Version: 3.20.5 Build: 289</small><br>
+<span class="badge badge-success"><i class="fa fa-check"></i>&nbsp;New</span><br>
+- Hash/Salting technique<br>
+</p>
+
+<p>
+04MAY20 <small style="color: grey">Version: 3.20.5 Build: 288</small><br>
+<span class="badge badge-success"><i class="fa fa-check"></i>&nbsp;New</span><br>
+- Moved PDF and QR - services to /public/services/<br>
+</p>
+
+<p>
+03MAY20 <small style="color: grey">Version: 3.20.5 Build: 287</small><br>
+<span class="badge badge-success"><i class="fa fa-check"></i>&nbsp;New</span><br>
+- Mouse over function (CSS)<br>
+- Added pdf folder for TCPDF<br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Changes to autoloader<br>
+</p>
+
+<p>
+27APR20 <small style="color: grey">Version: 3.20.4 Build: 286</small><br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Changes to Fonts Palette<br>
+</p>
+
+<p>
+19APR20 <small style="color: grey">Version: 3.20.4 Build: 286</small><br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Minor tweeks and changes<br>
+</p>
+
+<p>
+15APR20 <small style="color: grey">Version: 3.20.4 Build: 285</small><br>
+<span class="badge badge-success"><i class="fa fa-check"></i>&nbsp;New</span><br>
+- Added new Markdown function<br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Moved MAIN CONTENT SWITCH funtion from view to controller for clarity<br>
+- Moved release file to /content/markdown/ 
+</p>
 
 <p>
 10APR20 <small style="color: grey">Version: 3.20.4 Build: 284</small><br>

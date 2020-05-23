@@ -4,7 +4,7 @@
 # Created by : 		Galoga Tech
 # Contact : 		hello@galoga.tech
 # Created date : 	2019-12-14
-# Update date :  	2020-03-09
+# Update date :  	2020-04-15
 ########################################
 
 ########################################
@@ -12,7 +12,7 @@
 ########################################
 
 ########################################
-# THIS IS THE PAGE TEMPLATE 
+# THIS IS THE MAIN PAGE TEMPLATE 
 ########################################
 ?>
 <!DOCTYPE html>
@@ -32,9 +32,10 @@
 <?php # -- CSS / JAVA SCRIPT TOGGLE CHK BOX -- ?>
 	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/css/bootstrap4-toggle.min.css" rel="stylesheet">
 <?php # -- FONTS -- ?>
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,600" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Courier+Prime:400,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,600,700,800,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=B612+Mono|Covered+By+Your+Grace|Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 <?php # -- ICONS -- ?>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -58,39 +59,16 @@
 <?php # -- NAVIGATION -- ?>
 	<nav class="navbar navbar-expand-lg fixed-top navbar-<?= CON_NAV_COLOUR; ?> bg-<?= CON_NAV_COLOUR; ?> <?= CON_NAV_BORDER; ?>">
 	<?php # -- nav class="navbar navbar-expand-lg navbar-light" style="background-color: #000000;" -- ?> 
-		<a class="navbar-brand" href="index.php"><?= CON_SITE_NAME; ?></a>
+		<a class="navbar-brand text-logo" href="index.php"><?= CON_SITE_NAME; ?></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
 	    		<span class="navbar-toggler-icon"></span>
 			</button>
     <?php include '../includes/view/view_navigation.inc.php'; # -- NAV LINKS FUNCTION --  ?>
     </nav>									
 <main>
-<?php # -- INSERT OF CONTENT HANDLER BLW -- 
-if(isset($_GET['pid'])):   
-    if(isset($_GET['mid'])): 
-	    echo '<section class="section">';
-        echo '<div class="container'.CON_DIV_STYLE.'">';
-        echo '<div class="row">';
-        echo '<div class="col-md-12">';
-        $contents = file_get_contents("content/markdown/".$_GET['mid'].".md");
-        $Parsedown = new Parsedown();
-        echo $Parsedown->text($contents);
-        echo '</p>';
-        echo '</div>';
-        echo '</div>';
-        echo '</div>';
-        echo '</section>';
-    # elseif(isset($_GET['sid'])):
-    #     include 'content/start-'.$_GET['sid'].'.inc.php';
-    elseif(empty($_GET['pid'])): 
-	    include 'content/index.inc.php';
-    else:
-	   include 'content/'.$_GET['pid'].'.inc.php'; 
-    endif;    
-else:
-    include 'content/index.inc.php';
-endif
-# -- INSERT OF CONTENT HANDLER ABV  -- ?>
+<?php # -- CONTENT SWITCH HANDLER BLW -- 
+FUNC_MAIN_CONTENT_SWITCH();
+# -- CONTENT SWITCH HANDLER ABV  -- ?>
 </main>
 <footer>
 <?php # -- FOOTER BLW -- 

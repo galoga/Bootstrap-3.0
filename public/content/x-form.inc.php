@@ -37,10 +37,12 @@ FUNC_ALERT();
 
 <section class="section">
 <div class="container<?= CON_DIV_STYLE; ?>">
-<div class="row">
-    <div class="col-md-6">
-        <form method="POST"">
-        
+    <div class="row">   
+        <div class="col-md-3"></div>
+         <div class="col-md-6">
+        <form name="" method="post" action="pid=" autocomplete="off" accept-charset="UTF-8" class="form-horizontal">
+        <form name="" method="post" action="<?php htmlentities($_SERVER['PHP_SELF']); ?>" accept-charset="utf-8" class="form-horizontal">
+  
             <div class="row mb-2">
                 <div class="col-md-6">
                     <label>First name</label><input type="text" name="fname" placeholder="First name" required class="form-control">
@@ -119,7 +121,7 @@ FUNC_ALERT();
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fa fa-plane"></i>&nbsp;Flight number</span>
                     </div>
-                    <input type="text id="flt" name="flt" value="" class="form-control text-uppercase">
+                    <input type="text" id="flt" name="flt" value="" class="form-control text-uppercase">
                 </div>            
             </div>
     
@@ -128,7 +130,7 @@ FUNC_ALERT();
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-calendar"></i>&nbsp;Date</span>
                     </div>
-                    <input type="text id="flt" name="flt" value="2020-02-18" readonly class="form-control text-uppercase">
+                    <input type="text" id="flt" name="flt" value="2020-02-18" readonly class="form-control text-uppercase">
                 </div>            
             </div>
             
@@ -139,10 +141,10 @@ FUNC_ALERT();
             
             <div class="row mb-2">
                 <div class="col-md-6">
-                    <!--  FORM CONTENT HERE  -->
+                    <!--  FORM CONTENT HERE  --><input type="text" name="user" placeholder="User" required class="form-control">
                 </div>
                 <div class="col-md-6">
-                    <!--  FORM CONTENT HERE  -->
+                    <!--  FORM CONTENT HERE  --><input type="text" name="code" placeholder="Code" required class="form-control">
                 </div>
             </div>
 
@@ -160,83 +162,39 @@ FUNC_ALERT();
  
             <div class="mb-2">
                 <button class="btn btn-success btn-block"><i class="fas fa-check"></i>&nbsp;SEND</button>
-            </div> 
-            
+            </div>       
         </form>
-    </div>
-    <div class="col"></div>
-    <div class="col"></div>
-</div>
-</section>
-
-<section class="section">
-<div class="container<?= CON_DIV_STYLE; ?>">
-    <form>
-        <div class="row mb-2">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-4"><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
-            </div>
         </div>
-        <div class="row mb-2">
-            <label for="inputPassword" class="col-sm-2 col-form-label"><i class="fa fa-plane"></i>&nbsp;Flight number</label>
-            <div class="col-sm-4"><input type="password" class="form-control" id="inputPassword" placeholder="Password">
-            </div>
-        </div>       
-    </form>
+        <div class="col-md-3"></div>
+    </div>
 </div>
 </section>
 
-<!--   
+<div>&nbsp;</div>
+
+<!--  
 <section class="section">
 <div class="container<?= CON_DIV_STYLE; ?>">
     <div class="row">
-			<div class="col"></div>
-			<div class="col-md-6">
-				<form>
-					<div class="form-group">
-						<label for="name" id="name">Full name:</label>
-						<input class="form-control" type="text" name="name">
-					</div>
-					<div class="form-group">
-						<label for="email" id="email">E-mail:</label>
-						<input class="form-control" type="text" name="email">
-					</div>
-					
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-prepend">
-							<span class="input-group-text">Username</span>
-							</div>
-						<input type="text" class="form-control" placeholder="Username">
-						</div>
-					</div>
+        <div class="col-md-12">  
+        <form>
+            <div class="row mb-2">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-4"><input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <label for="inputPassword" class="col-sm-2 col-form-label"><i class="fa fa-plane"></i>&nbsp;Password</label>
+                <div class="col-sm-4"><input type="password" class="form-control" id="inputPassword" placeholder="Password"></div>
+            </div>       
+        </form>
+        </div> 
+    </div>
+</div>
+</section>
 
-					<div class="form-group">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Your Email">
-							
-							<div class="input-group-append">
-							
-							<span class="input-group-text">@example.com</span>
-							</div>
-						</div>
-					</div>
-					
-					<div class="form-group">
-						<div class="input-group">
-							<div class="input-group-prepend">
-							<span class="input-group-text">Username</span>
-							</div>
-							
-							<input type="text" class="form-control" placeholder="Your Email">
-							
-							<div class="input-group-prepend">
-							<span class="input-group-text">@example.com</span>
-							</div>
-						</div>
-					</div>
-					
-					<div class="form-group ">
+				
+	<div class="form-group ">
 						<label for="age" id="age">E-mail:</label>
 						<select class="form-control">
 							<option>10+</option>
@@ -244,43 +202,5 @@ FUNC_ALERT();
 							<option>40+</option>
 						</select>
 					</div>
-					
-
-					
-<div class="input-group mb-3">
+-->
    
-    <div class="input-group-prepend">
-        <div class="input-group-text">
-            <input  id="" name="" type="checkbox" aria-label="" >&nbsp;Username
-         </div>
-    </div>
-    <input id="" name="" type="text" value="JKG" readonly class="form-control" aria-label="">
-</div>
-					
-			
-<div class="input-group">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="" ><i class="fa fa-plane"></i>&nbsp;Flight</span>
-  </div>
-  <input id="flt" name="flt" type="text" value="" class="form-control text-uppercase">
-</div>
-  
-<div class="input-group-prepend">
-    <span class="input-group-text" id=""><i class="fa fa-plane"></i>&nbsp;Reg</span>
-</div>
-  <input id="reg" name="reg" type="text" class="form-control text-uppercase">
-</div>
-				
-					
-					<div class="form-group">
-						<label for="Message" id="messsage">Message: </label>
-						<textarea class="form-control"></textarea>
-					</div>
-					<button name="submit" type="submit" class="btn btn-block btn-outline-success">Submit</button>
-				</form>
-			</div>
-			<div class="col"></div>
-		</div>
-	</div>
-</section>
- -->

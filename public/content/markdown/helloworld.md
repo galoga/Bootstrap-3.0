@@ -12,7 +12,6 @@
 - Possible to combine **HTML** & **Markdown** together 
 - Perfect as **Intranet** /  **Extranet** / **Project site** or **Member site** 
 
-
 #####Smart add-ons:
 - Basic **Log On** feature
 - Automated **Download** function
@@ -27,5 +26,6 @@ You need a basic knowledge of HTML, CSS & PHP to get this baby up and running!
 This Boilerplate is built around a <a href="https://en.wikipedia.org/wiki/Model–view–controller">MODEL-VIEW-CONTROLLER</a> design pattern.
 
 <p>
-<a href="http://galoga.github.io" class="btn btn-primary"><i class="fas fa-tools">&nbsp;</i>Configure the site - <i class="fab         fa-github">&nbsp;</i>GitHub</a>&nbsp;
+<a href="http://galoga.github.io" class="btn btn-primary"><i class="fas fa-tools">&nbsp;</i>Configure the site - <i class="fab fa-github">&nbsp;</i>GitHub</a>&nbsp;
 </p>
+

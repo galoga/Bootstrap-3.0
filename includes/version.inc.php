@@ -10,7 +10,7 @@
 # LOADED IN "autoloader.inc.php"
 ########################################
 
-const CON_VERSION_DATE  = '2020-04-10';
-const CON_VERSION_BUILD = '284'; #Deleted Nav error in view.inc.php
-const CON_VERSION       = '3.20.4';
-?>
+const CON_VERSION_DATE  = '2020-05-23';
+const CON_VERSION_BUILD = '289'; #ADD PAGE NAME STRIPPER
+const CON_VERSION       = '3.20.5';
+

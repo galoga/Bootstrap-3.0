@@ -33,6 +33,11 @@ FUNC_ALERT();
 
 # ALERT FUNCTION FOR LOCKED PAGES -- NB MUST BE turned on if page is locked
 # FUNC_ALERT_LOCKED();
+
+########################################
+# LOCAL PAGE FUNCTIONS
+# Place local page functions below
+########################################
 ?>
 <section class="section">
 	<div class="container<?= CON_DIV_STYLE; ?>">

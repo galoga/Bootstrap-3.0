@@ -3,8 +3,8 @@
 # © Copyright : All rights reserved 2020
 # Created by : 		Air Message
 # Contact : 		hello@galoga.tech
-# Created date : 	2020-02-25
-# Update date :  	2020-03-16
+# Created date : 	2020-02-2
+# Update date :  	2020-05-04
 ########################################
 
 ########################################
@@ -24,8 +24,13 @@ include 'version.inc.php';
 include 'vendor/PHPMailer/src/Exception.php';
 include 'vendor/PHPMailer/src/PHPMailer.php';
 include 'vendor/PHPMailer/src/SMTP.php';
-# -- TCPDF -- 
+
+# -- TCPDF -- SEE /public/pdf/pdf.php
 #include 'vendor/TCPDF/tcpdf.php';
+
+# -- phpqrcode
+#include 'vendor/phpqrcode/qrlib.php';
+
 # -- Parsedown -- 
 include 'vendor/Parsedown/Parsedown.php';
 

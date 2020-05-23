@@ -4,7 +4,7 @@
 # Created by : Galoga Industries
 # Contact : hello@galo.ga
 # Created date : 2019-06-22
-# Update date :  2019-10-22
+# Update date :  2020-05-03
 ########################################	
 
 // Allow direct file download (hotlinking)?

@@ -4,16 +4,17 @@
 # Created by : 		Air Message
 # Contact : 		hello@galoga.tech
 # Created date : 	2019-12-14
-# Update date :  	2020-02-28
+# Update date :  	2020-05-23
 ########################################
 
 ########################################
-# THESE FILES WILL 
+# DON'T TOUCH THIS FILE!
 ########################################
 
 # -- USER CONFIGURATION --
-include 'config.inc.php';
+include 'settings.inc.php';
 
 # -- AUTOLOADER --
 include '../includes/autoloader.inc.php';
-?>
+
+

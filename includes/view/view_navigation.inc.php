@@ -26,8 +26,10 @@
  			</li>
  			<li class="nav-item">
  				<a class="nav-link disabled" href="#"><?php echo CON_NAV_LINK_RGT; ?><span class="text-nav">Yet another link</span></a>
- 			</li> 	
-            <?php if(isset($_GET['u'])): ?>
+ 			</li>
+ 			
+ 			<?php # -- NAV LOG ON BLW ;
+            if(isset($_GET['u'])): ?>
             <li>
             <li class="nav-item">
  			    <a class="nav-link" href="pid=logon"><?php echo CON_NAV_LINK_LOGOUT; ?><span class="text-nav">Log Out</span></a>
@@ -36,7 +38,9 @@
             <li class="nav-item">
  		        <a class="nav-link" href="pid=logon"><?php echo CON_NAV_LINK_LOGON; ?><span class="text-nav">Log On</span></a>
  			</li> 
-            <?php endif; ?>						
+            <?php endif; 
+            # -- NAV LOG ON ABV ; ?>
+ 			
  			<li class="nav-item">
  			    <a class="nav-link" href="pid=contact"><?php echo CON_NAV_LINK_CTC; ?><span class="text-nav">Contact Us</span></a>
  			</li>

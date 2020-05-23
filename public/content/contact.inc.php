@@ -33,14 +33,19 @@ FUNC_ALERT();
 
 # ALERT FUNCTION FOR LOCKED PAGES -- NB MUST BE turned on if page is locked
 #  	FUNC_ALERT_LOCKED();
+
+########################################
+# LOCAL PAGE FUNCTIONS
+# Place local page functions below
+########################################
 ?>
 <section class="section">
 	<div class="container<?= CON_DIV_STYLE; ?>">
 		<h2>Contact Us</h2>
 		<h5>We are here to help</h5>
 		<p>
-		<i class="fas fa-phone-square"></i>&nbsp;Telephone: <a href="tel:+15551111">+1-555-1111</a><br>
-		<i class="fas fa-envelope-square"></i>&nbsp;E-mail: <a href="mailto:hello@<?= CON_SITE_URL ?>">hello@<?= CON_SITE_URL ?></a>
+		<i class="fas fa-phone-square icon-colour"></i>&nbsp;Telephone: <a href="tel:+15551111">+1-555-1111</a><br>
+		<i class="fas fa-envelope-square icon-colur"></i>&nbsp;E-mail: <a href="mailto:hello@<?= CON_SITE_URL ?>">hello@<?= CON_SITE_URL ?></a>
 		</p>  
 	</div>
 </section>

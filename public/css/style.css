@@ -3,11 +3,11 @@
 # Created by : Galoga Industries
 # Contact : 	hello@galoga.tech
 # Created :		2019-12-15	 	
-# Update : 		2020-01-03
+# Update : 		2020-04-15
 ########################################	
 
 ######################################## 
-# INCLUDED IN view.php 
+# INCLUDED IN inclues/view/view.php 
 ########################################
 
 .class:before {
@@ -19,9 +19,9 @@
 }
 
 body {
-        padding-top: 65px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-		padding-bottom: 50px;
+    padding-top: 65px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	padding-bottom: 50px;
 }
 
 .section {
@@ -37,24 +37,24 @@ body {
 }
 
 .container-padding {
-        padding-top: 0px;
-        padding-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .row-padding {
-      padding-top: 0px;
-      padding-bottom: 0px;
-      width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    width: 100%;
 }
 
 .footer-padding {
-        padding-top: 5px;
-        padding-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 0px;
 }  
 
 .text-grey {
-        letter-spacing: 0px;
-        color: #555f61;
+    letter-spacing: 0px;
+    color: #555f61;
 }
 
 .text-nav {
@@ -63,26 +63,30 @@ body {
 } 
 
 .text-logo {
-        font-family: Ubuntu;
-        letter-spacing: 0px;
+    font-family: Ubuntu;
+    letter-spacing: 0px;
+}
+
+.icon-colour { 
+    color: #ebebeb;
 }
 
 h2 {
-  padding-bottom: 5px;
+    padding-bottom: 5px;
   	border-bottom: 1px solid #ebebeb;
 }
 
 .forms-blank
 select {
-  border: 23px
+        border: 23px
 }
     
 select:focus {
-  border: 0px 
+        border: 0px 
 }
 
 .mdi::before {
-    font-size: 24px;
+        font-size: 24px;
     line-height: 14px;
 }
 
@@ -157,3 +161,116 @@ select:focus {
     top: 3px;
     left: -3px
 }
+
+.tooltip:hover,
+[data-tooltip-bottom]:hover,
+[data-tooltip-left]:hover,
+[data-tooltip-right]:hover,
+[data-tooltip]:hover {
+	position: relative;
+}
+[data-tooltip-bottom]:hover::after,
+[data-tooltip-left]:hover::after,
+[data-tooltip-right]:hover::after,
+[data-tooltip]:hover::after {
+	all: initial;
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;		  
+	border-top: 10px solid #1a1a1a;
+	position: absolute;
+	bottom: 100%;
+	content: '';
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-bottom: 5px;
+}
+[data-tooltip-right]:hover::after {
+	margin-bottom: 0;
+	bottom: auto;
+	transform: rotate(90deg) translate(0, -50%);
+	left: 100%;
+	top: 50%;
+	margin-left: -5px;
+	margin-top: -5px;
+}
+[data-tooltip-left]:hover::after {
+	margin-bottom: 0;
+	bottom: auto;
+	transform: rotate(-90deg) translate(0, -50%);
+	left: auto;
+	right: 100%;
+	top: 50%;
+	margin-right: -5px;
+	margin-top: -5px;
+}
+[data-tooltip-bottom]:hover::after {
+	margin-bottom: 0;
+	bottom: auto;
+	transform: rotate(180deg) translate(-50%, 0);
+	top: 100%;
+	margin-left: -20px;
+	margin-top: 5px;
+}
+.tooltip:hover .tooltip-dynamic-bottom,
+.tooltip:hover .tooltip-dynamic-left,
+.tooltip:hover .tooltip-dynamic-right,
+.tooltip:hover .tooltip-dynamic,
+[data-tooltip-bottom]:hover::before,
+[data-tooltip-left]:hover::before,
+[data-tooltip-right]:hover::before,
+[data-tooltip]:hover::before {
+	all: initial;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #1a1a1a;
+	content: attr(data-tooltip);
+	color: #f9f9f9;
+	position: absolute;
+	bottom: 100%;
+	width: 100px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-bottom: 15px;
+	text-align: center;
+	font-size: 14px;
+}
+.tooltip:hover .tooltip-dynamic-right,
+[data-tooltip-right]:hover::before {
+	margin-bottom: 0;
+	bottom: auto;
+	transform: translate(0, -50%);
+	left: 100%;
+	top: 50%;
+	content: attr(data-tooltip-right);
+	margin-left: 15px;
+}
+.tooltip:hover .tooltip-dynamic-left,
+[data-tooltip-left]:hover::before {
+	margin-bottom: 0;
+	bottom: auto;
+	transform: translate(0, -50%);
+	left: auto;
+	right: 100%;
+	top: 50%;
+	content: attr(data-tooltip-left);
+	margin-right: 15px;
+}
+.tooltip:hover .tooltip-dynamic-bottom,
+[data-tooltip-bottom]:hover::before {
+	margin-bottom: 0;
+	bottom: auto;
+	top: 100%;
+	content: attr(data-tooltip-bottom);
+	margin-top: 15px;
+}
+.tooltip .tooltip-dynamic-bottom,
+.tooltip .tooltip-dynamic-left,
+.tooltip .tooltip-dynamic-right,
+.tooltip .tooltip-dynamic {
+	display: none;
+	width: auto !important;

@@ -4,7 +4,7 @@
 # Created by : 		Galoga Industries
 # Contact : 		hello@galoga.tech
 # Created date : 	2019-12-14
-# Update date :		2020-01-23
+# Update date :		2020-04-17
 ########################################
 
 ########################################
@@ -12,28 +12,29 @@
 ########################################
 
 ########################################
-# THIS FILE AFFECTS ALL BASIC CONFIG
-# SETTINGS OF THE SITE
+# THIS FILE AFFECTS ALL BASIC SETTINGS
+# OF THE SITE
 # CONSTANTS are all in CAPITALS and 
 # start with "CON_" to make it easy 
 ########################################
 
-const CON_SITE_URL = '&lt; www.yoursite.com &gt;';
+// -- SITE URL --
+const CON_SITE_URL = '&lt; yoursite.com &gt;';
 
 // -- SITE NAME --
 const CON_SITE_NAME = '&lt; YOUR SITE NAME HERE &gt;';
 
 // -- FOOTER TEXT  --
-const CON_SITE_FOOTER = '&lt; YOUR MESSAGE &gt;';
+const CON_SITE_FOOTER = '&lt; YOUR PAY OFF MESSAGE &gt;';
 
 // -- FOOTER copyright TEXT --
 const CON_SITE_COPYRIGHT = '&copy;&nbsp;Copyright';
 
 // -- BROWSER WINDOW TITLE --
-const CON_PAGE_TITLE = '&lt; YOUR PAGE NAME HERE &gt;';
+const CON_PAGE_TITLE = '&lt; YOUR PAGE TITLE HERE &gt;';
 
 // -- BOOTSTRAP THEME COLOUR FOR NAVBAR use 'dark' or 'light' --
-const CON_NAV_COLOUR = 'light'; 
+const CON_NAV_COLOUR = 'dark'; 
 
 // -- BOOTSTRAP THEME BORDER FOR NAVBAR use 'border-bottom' = ON or 'NULL' = OFF --
 const CON_NAV_BORDER = 'border-bottom'; 
@@ -48,22 +49,28 @@ const CON_FOOTER_COLOUR = 'light';
 const CON_FOOTER_TYPE = 'fixed';
 
 // -- BOOTSTRAP NAVIGATION LINK SYMBOLS LEFT // fa fa-angle-double-left --
-const CON_NAV_LINK_LFT = '<i class="fa fa-caret-left"></i>&nbsp;';
+const CON_NAV_LINK_LFT = '<i class="fa fa-caret-left icon-colour"></i>&nbsp;';
 
 // -- BOOTSTRAP NAVIGATION LINK SYMBOLS RIGHT // fa fa-angle-double-right --
-const CON_NAV_LINK_RGT = '<i class="fa fa-caret-right"></i>&nbsp;';
+const CON_NAV_LINK_RGT = '<i class="fa fa-caret-right icon-colour"></i>&nbsp;';
 
 //
-const CON_NAV_LINK_LOGON = '<i class="fas fa-lock"></i>&nbsp;';
+const CON_NAV_LINK_LOGON = '<i class="fas fa-lock icon-colour"></i>&nbsp;';
 
 //
-const CON_NAV_LINK_LOGOUT = '<i class="fas fa-lock-open"></i>&nbsp;';
+const CON_NAV_LINK_LOGOUT = '<i class="fas fa-lock-open icon-colour"></i>&nbsp;';
 
 //
-const CON_NAV_LINK_CTC = '<i class="fas fa-info-circle"></i>&nbsp;';
+const CON_NAV_LINK_CTC = '<i class="fas fa-info-circle icon-colour"></i>&nbsp;';
 
 //
-const CON_NAV_LINK_HOME = '<i class="fa fa-home"></i>&nbsp;';
+const CON_NAV_LINK_USER = '<i class="fas fa-user icon-colour"></i>&nbsp;';
+
+//
+const CON_NAV_LINK_SETTINGS = '<i class="fas fa-cog icon-colour"></i>&nbsp;';
+
+//
+const CON_NAV_LINK_HOME = '<i class="fa fa-home icon-colour"></i>&nbsp;';
 
 // -- TURN 'on' OR 'off' SITE WIDE ALERT MESSAGE
 const CON_ALERT_STATE = 'off';
@@ -88,7 +95,6 @@ const CON_DIV_STYLE = '';
 
 const CON_SPACE = [1 =>'<div>&nbsp;</div>','<div>&nbsp;</div><div>&nbsp;</div>', '<div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>', '<div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>'];
 
-const CON_HOMAGE_INFO   = 'Powered by &lt;/galoga&gt; Technologies™
-';
-?>
+const CON_HOMAGE_INFO   = 'Powered by &lt;/galoga&gt; Technologies™';
+
 
