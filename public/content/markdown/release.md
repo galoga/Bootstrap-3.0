@@ -2,6 +2,26 @@
 #####What's on the agenda
 <!-- # THIS PAGES COMES AS PART OF THE DEFAULT INSTALLATION  -->
 <p>
+12SEP20 <small style="color: grey">Version: 3.20.9 Build: 293</small><br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Added bottom padding to content in the CSS<br></p>
+
+<p>
+19JUN20 <small style="color: grey">Version: 3.20.6 Build: 292</small><br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Changes to autoload function<br></p>
+
+<p>
+07JUN20 <small style="color: grey">Version: 3.20.6 Build: 291</small><br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Changes to access of sub-directories in public folder<br></p>
+
+<p>
+30MAY20 <small style="color: grey">Version: 3.20.5 Build: 290</small><br>
+<span class="badge badge-info"><i class="fas fa-tools"></i>&nbsp;Fixes</span><br>
+- Changes to autoloader<br></p>
+
+<p>
 09MAY20 <small style="color: grey">Version: 3.20.5 Build: 289</small><br>
 <span class="badge badge-success"><i class="fa fa-check"></i>&nbsp;New</span><br>
 - Hash/Salting technique<br>

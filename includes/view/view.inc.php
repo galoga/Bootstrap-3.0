@@ -40,7 +40,11 @@
 <?php # -- ICONS -- ?>
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" type="text/css" href="https://cdn.materialdesignicons.com/3.6.95/css/materialdesignicons.min.css">
-	<link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--  FA 4.X  -->
+	<!-- <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<!--  FA 5.X  -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/v4-shims.css">
 	<script src="https://kit.fontawesome.com/1eee006928.js"></script>
 <?php # --  FAV ICONS -- ?>
 	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">

@@ -44,8 +44,10 @@ FUNC_ALERT();
 		<h2>Contact Us</h2>
 		<h5>We are here to help</h5>
 		<p>
+		<address>
 		<i class="fas fa-phone-square icon-colour"></i>&nbsp;Telephone: <a href="tel:+15551111">+1-555-1111</a><br>
-		<i class="fas fa-envelope-square icon-colur"></i>&nbsp;E-mail: <a href="mailto:hello@<?= CON_SITE_URL ?>">hello@<?= CON_SITE_URL ?></a>
+		<i class="fas fa-envelope-square icon-colour"></i>&nbsp;E-mail: <a href="mailto:hello@<?= CON_SITE_URL ?>">hello@<?= CON_SITE_URL ?></a>
+		</address>
 		</p>  
 	</div>
 </section>

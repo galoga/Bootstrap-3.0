@@ -49,7 +49,11 @@ FUNC_ALERT();
 				<td><strong>E-post</strong></td>
 			</tr>
 			<?php $csv_file = fopen("content/x-csv.csv", "r");
-			while(($row = fgetcsv($csv_file, 0, ",")) !== FALSE) :?>
+			$count = 0;
+			while(($row = fgetcsv($csv_file, 0, ",")) !== FALSE) :
+			$count++;
+            if ($count == 1) { continue; }
+			?>
 	 		<tr>
 	 			<td><?php echo $row[0]; ?></td>
 	 			<td><?php echo $row[1]; ?></td>
@@ -57,6 +61,7 @@ FUNC_ALERT();
 	 		</tr> 
 	 		<?php endwhile; ?>
 	 		<?php fclose($csv_file); ?> 
+	 		
 		</tbody>
 	    </table>
         </div>

@@ -1,10 +1,9 @@
 <?php 
 ########################################
-# © Copyright : 	All rights reserved 2019
+# © Copyright : All rights reserved 2020
 # Created by : 		Galoga Tech
 # Created date : 	2019-12-14
-# Update date :  	2019-12-15
-# Version : 		1.19.12
+# Update date :  	2020-06-07
 ########################################
 
 ########################################

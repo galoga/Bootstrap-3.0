@@ -39,10 +39,9 @@ FUNC_ALERT();
 <div class="container<?= CON_DIV_STYLE; ?>">
     <div class="row">   
         <div class="col-md-3"></div>
-         <div class="col-md-6">
+        <div class="col-md-6">
         <form name="" method="post" action="pid=" autocomplete="off" accept-charset="UTF-8" class="form-horizontal">
         <form name="" method="post" action="<?php htmlentities($_SERVER['PHP_SELF']); ?>" accept-charset="utf-8" class="form-horizontal">
-  
             <div class="row mb-2">
                 <div class="col-md-6">
                     <label>First name</label><input type="text" name="fname" placeholder="First name" required class="form-control">
@@ -162,10 +161,11 @@ FUNC_ALERT();
  
             <div class="mb-2">
                 <button class="btn btn-success btn-block"><i class="fas fa-check"></i>&nbsp;SEND</button>
-            </div>       
+            </div> 
         </form>
         </div>
         <div class="col-md-3"></div>
+        
     </div>
 </div>
 </section>

@@ -3,8 +3,8 @@
 # © Copyright : All rights reserved 2020
 # Created by : 		Air Message
 # Contact : 		hello@galoga.tech
-# Created date : 	2020-02-2
-# Update date :  	2020-05-04
+# Created date : 	2020-02-20
+# Update date :  	2020-06-19
 ########################################
 
 ########################################
@@ -15,9 +15,29 @@
 # THIS FILE AUTOLOADS ALL NECESSARY 
 # FILES FOR GENERATION OF THE SITE
 ########################################
-  
-# -- VERSION CONTROLLER --
-include 'version.inc.php';
+
+########################################
+# LOCAL PAGE FUNCTIONS
+# Place local page functions below
+########################################
+
+function autoLoader($folder , $file){
+    $path         = $folder."/";
+    $extension    = ".inc.php";
+    $fullFilePath = $path.$file.$extension;
+    include_once $fullFilePath;
+}
+
+########################################
+# USER AUTOLOADS 
+########################################
+
+#autoLoader('<folder>', '<file>');
+
+########################################
+# SYSTEM AUTOLOADS - DON'T TOUCH
+# USER AUTOLOADS - BELOW
+########################################
 
 # -- EXTERNAL VENDOR HANDLERS  --
 # -- PHPMAiler --
@@ -34,14 +54,17 @@ include 'vendor/PHPMailer/src/SMTP.php';
 # -- Parsedown -- 
 include 'vendor/Parsedown/Parsedown.php';
 
-# -- MAIN CONTROLLER FOR THE SITE --
-include 'controller/controller.inc.php';
+# -- VERSION CONTROLLER --
+include 'version.inc.php';
+
+# -- MAIN CONTROLLERS FOR THE SITE --
+autoLoader('controller', 'controller');
 
 # --MAIN CLASSES HANDLER --
-include 'class/class.inc.php';
+autoLoader('class', 'class');
 
 # -- MAIN MODEL HANDLER -- DB CONNECTOR --
-include 'model/model.inc.php';
+autoLoader('model', 'model');
 
 # -- HTML PAGE TEMPLATE HANDLER --
-include 'view/view.inc.php';
+autoLoader('view', 'view');

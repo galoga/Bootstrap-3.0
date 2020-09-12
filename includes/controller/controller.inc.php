@@ -153,7 +153,6 @@ define('CON_M', date("m"));
 define('CON_D', date("d"));
 define('CON_YMD', date("Ydm"));
 define('CON_Y-M-D', date("Y-d-m"));
-
 define('CON_H', date("Y-d-m"));
 
 $salt_1			= '';
@@ -162,6 +161,29 @@ $hash           = md5(date('g-G-h-H-W-Y')); # CHANGE ORDER
 $uuid      		= strtoupper($salt_1.$hash.$salt_2);
 
 define('CON_UUID', $uuid); 
+
+// Sanitize functions
+// Make sanitizing easy and you will do it often
+
+// Sanitize for HTML output 
+function h($string) {
+	return htmlspecialchars($string);
+}
+
+// Sanitize for JavaScript output
+function j($string) {
+	return json_encode($string);
+}
+
+// Sanitize for use in a URL
+function u($string) {
+	return urlencode($string);
+}
+
+// Usage examples, leave commented out
+// echo h("<h1>Test string</h1><br />");
+// echo j("'}; alert('Gotcha!'); //");
+// echo u("?title=Working? Or not?");
 
 ########################################
 # DEFAULT WELOCOME TEXT in 

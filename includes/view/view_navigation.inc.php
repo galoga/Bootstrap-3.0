@@ -4,7 +4,7 @@
 # Created by : 		Galoga Industries
 # Contact : 		hello@galoga.tech
 # Created date : 	2019-12-21
-# Update date :		2020-03-10
+# Update date :		2020-06-07
 ########################################
 
 ########################################
@@ -28,12 +28,14 @@
  				<a class="nav-link disabled" href="#"><?php echo CON_NAV_LINK_RGT; ?><span class="text-nav">Yet another link</span></a>
  			</li>
  			
- 			<?php # -- NAV LOG ON BLW ;
+ 			<?php # -- NAV LOG ON BLW --;
+ 			# --
             if(isset($_GET['u'])): ?>
             <li>
             <li class="nav-item">
  			    <a class="nav-link" href="pid=logon"><?php echo CON_NAV_LINK_LOGOUT; ?><span class="text-nav">Log Out</span></a>
  			</li>
+ 			
             <?php else: ?>
             <li class="nav-item">
  		        <a class="nav-link" href="pid=logon"><?php echo CON_NAV_LINK_LOGON; ?><span class="text-nav">Log On</span></a>

@@ -268,7 +268,7 @@ select:focus {
 	content: attr(data-tooltip-bottom);
 	margin-top: 15px;
 }
-.tooltip .tooltip-dynamic-bottom,
+.tooltip 
 .tooltip .tooltip-dynamic-left,
 .tooltip .tooltip-dynamic-right,
 .tooltip .tooltip-dynamic {
